@@ -1,12 +1,24 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+}
+#aoba{
+    display: none;
 }
 a{
-    font-family: sans-serif;
     text-decoration: none;
 }
-
+.top{
+    margin-top: 40px;
+}
+.perfil{
+    width: 200px;
+    border-radius: 50px;
+}
+h1{
+    font-size: 50px;
+}
 .img{
     margin-top: 10px;
     width: 220px;
@@ -21,6 +33,9 @@ a{
 header{
     background-color: #000000;
     padding-inline: 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 nav{
     max-width: 1280px;
@@ -45,6 +60,13 @@ nav{
     padding-block: 16px;
     
 }
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
 .hero{
     max-width: 1280px;
     margin-inline: auto;
@@ -54,16 +76,28 @@ nav{
     gap: 70px;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
     background-color: center / cover no-repeat url(Back.jpg);
 }
 .algo{
-    padding: 2vh 24%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 70%;
+    height: 50px;
+    font-size: 23px;
+    font-weight: bold;
+    gap: 10px;
     background-color: rgb(44, 44, 44);
     color: #fff;
     animation-name: animacaod;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+}
+.algo img{
+    width: 38px;
+    
 }
 .hamburger{
     display: none;
@@ -82,10 +116,49 @@ nav{
     position: relative;
     transition: 0.3s;
 }
+.footer{
+    width: 100;
+    min-height: 100px;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#insta{
+    animation-name: animacaoi;
+}
+#github{
+    animation-name: animacaog;
+}
+#lin{
+    animation-name: animacaol;
+}
+#yan{
+    animation-name: animacaoya;
+    width: 80%;
+}
+
+@media (min-width: 752px){
+    #aoba{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 150%;
+    }
+    header, .hero, .footer{
+        display: none;
+    }
+   
+}
 
 @media (max-width: 750px){
     body{
-        background: center / cover no-repeat url(Back.jpg);
+        min-height: 100%;
+        background: linear-gradient(to bottom,   #000000 , #280233);
+        background-attachment: fixed;
+        margin: 0;
     }
 
     .algo{
@@ -94,6 +167,7 @@ nav{
 
     .hamburger{
         display: block;
+        margin-right: 7vw;
         z-index: 1;
     }
     .nav-list{
@@ -105,7 +179,7 @@ nav{
         height: 100vh;
         background: center / cover no-repeat url(Back.jpg);
 
-        clip-path: circle(100px at 90% -15%);
+        clip-path: circle(100px at 99% -20%);
         transition: 1s ease-out;
 
         flex-direction: column;
@@ -165,9 +239,23 @@ nav{
     100% {width: 240px; padding-left: 10px;}
 
 }
-@keyframes animacaod{
-
-    0% {box-shadow: 0px 0px 3px 0px #ffffff;}
-    50% {box-shadow: 0px -1px 20px 0px #ffffff;}
-    100% {box-shadow: 0px 0px 3px 0px #ffffff;}
+@keyframes animacaoi{
+    0% {box-shadow: 0px 0px 3px 0px rgba(254,209,112);}
+    50% {box-shadow: 0px -1px 20px 0px #db2e7b}
+    100% {box-shadow: 0px 0px 3px 0px #6346c5}
+}
+@keyframes animacaog{
+    0% {box-shadow: 0px 0px 3px 0px #00031b}
+    50% {box-shadow: 0px -1px 20px 0px #ffffff}
+    100% {box-shadow: 0px 0px 3px 0px #00031b}
+}
+@keyframes animacaol{
+    0% {box-shadow: 0px 0px 3px 0px #ffffff}
+    50% {box-shadow: 0px -1px 20px 0px #008cff}
+    100% {box-shadow: 0px 0px 3px 0px #ffffff}
+}
+@keyframes animacaoya{
+    0% {box-shadow: 0px 0px 3px 0px #ffffff}
+    50% {box-shadow: 0px -1px 20px 0px #51ff00}
+    100% {box-shadow: 0px 0px 3px 0px #ffffff}
 }
